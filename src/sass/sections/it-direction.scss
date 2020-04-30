@@ -1,0 +1,41 @@
+.it-direction {
+  background-color: rgb(24, 28, 39);
+}
+
+.it-direction__title {
+  @include font($ff: $main-font, $fc: $third-text-color, $fw: 800, $fs:16px, $lh: 20px);
+  letter-spacing: -0.64px;
+  padding-top: 40px;
+}
+
+.it-direction__title:after {
+  content: "";
+  display: block;
+  border: 1px solid #00eaff;
+  width: 60px;
+  margin-bottom: 22px;
+  margin-top: 28px;
+}
+
+.it-direction__descr {
+  @include font($ff: $main-font, $fc: $third-text-color, $fw: 800, $fs: 14px, $lh: 22px);
+  letter-spacing: -0.56;
+}
+
+.it-direction__descr--thin {
+  @include font($ff: $main-font, $fc: $third-text-color, $fw: 300, $fs: 14px, $lh: 22px);
+  letter-spacing: -0.56;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  @include font($ff: $main-font, $fc: $secondary-text-color, $fw: 400, $fs: 20px, $lh: 30px);
+  margin-bottom: 28px;
+}
+
+.modal-btn {
+  @include font($ff: $main-font, 20px, 400, $secondary-text-color, 30px);
+  width: 260px;
+  height: 70px;
+  text-transform: uppercase;
+}
