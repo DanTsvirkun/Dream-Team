@@ -1,8 +1,9 @@
-@mixin font($ff: $main-font, $fs: 14px, $fw: 400, $fc: $main-text-color, $lh: 1.2) {
+@mixin font($ff: $main-font, $fs: 14px, $fw: 400, $fc: $main-text-color, $ls: 0, $lh: 1.2) {
     font-family: $ff;
     font-size: $fs;
     font-weight: $fw;
     color: $fc;
+    letter-spacing: $ls;
     line-height: $lh;
 }
 
