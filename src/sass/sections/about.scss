@@ -6,6 +6,9 @@
 
 .about__awards-paragraph {
     @include font($fs: 14px, $fc: #6b6f7a, $lh: 21px);
-    letter-spacing: ;
+}
+
+.about__awards-paragraph--modifier {
+    @include font($fc: #000, $dw: 800);
 }
 
