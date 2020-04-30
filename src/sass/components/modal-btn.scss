@@ -1,6 +1,6 @@
 .modal-btn {
-  font-family: $main-font;
-  weight: 800;
-  background-color: rgb(255, 112, 42);
-  box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
+  @include font($main-font, 14px, 800, #fff);
+  background-color: #ff6b08;
+  box-shadow: 0px 2px 10px 0px #ff6b0896;
+  cursor: pointer;
 }
