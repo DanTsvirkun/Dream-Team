@@ -1,0 +1,12 @@
+// ABOUT
+
+.about__awards-item-title {
+    @include font($fs: 20px, $fc: #000, $lh: 30px);
+    letter-spacing: -0.8px;
+}
+
+.about__awards-paragraph {
+    @include font($fs: 14px, $fc: #6b6f7a, $lh: 21px);
+    letter-spacing: ;
+}
+
