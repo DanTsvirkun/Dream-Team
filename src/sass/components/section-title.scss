@@ -1,0 +1,13 @@
+.section-title {
+    @include font($main-font, 48px, 800, $main-text-color, 60px);
+    letter-spacing: -1.92px;
+
+    &::before {
+        content: "[ ";
+    }
+
+    &::after {
+        content: " ]";
+    }
+}
+
