@@ -23,7 +23,7 @@
 }
 
 .about-list-title {
-    @include font($main-font, 16px, 800, $main-text-color, 21px)
+    @include font($main-font, 16px, 800, $main-text-color, 21px);
     display: inline-block;
     background-color: rgb(237, 240, 242);
 
@@ -35,5 +35,3 @@
         content: " ]";
     }
 }
-
-
