@@ -1,6 +1,31 @@
 .section-title {
-    @include font($main-font, 48px, 800, $main-text-color, 60px);
-    letter-spacing: -1.92px;
+    @include font($main-font, 20px, 800, $main-text-color, 30px);
+    letter-spacing: -0.8px;
+
+    &::before {
+        content: "[ ";
+    }
+
+    &::after {
+        content: " ]";
+    }
+
+    @media (min-width: 768px) { 
+        @include font($main-font, 30px, 800, $main-text-color, 40px);
+        letter-spacing: -1.2px;
+    }
+
+    @media (min-width: 1200px) { 
+        @include font($main-font, 48px, 800, $main-text-color, 60px);
+        letter-spacing: -1.92px;
+   }
+
+}
+
+.about-list-title {
+    @include font($main-font, 16px, 800, $main-text-color, 21px)
+    display: inline-block;
+    background-color: rgb(237, 240, 242);
 
     &::before {
         content: "[ ";
@@ -10,4 +35,5 @@
         content: " ]";
     }
 }
+
 
