@@ -1,4 +1,5 @@
 .it-direction {
+  background-image: url('../images/radial_gradient.png');
   background-color: rgb(24, 28, 39);
 }
 
@@ -34,8 +35,9 @@
 }
 
 .modal-btn {
-  @include font($ff: $main-font, 20px, 400, $secondary-text-color, 30px);
+  @include font($ff: $main-font, $fc: $third-text-color, $fs: 14px, $fw: 800);
   width: 260px;
   height: 70px;
   text-transform: uppercase;
+  border: none;
 }
