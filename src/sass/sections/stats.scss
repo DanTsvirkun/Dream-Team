@@ -45,7 +45,40 @@
 .article-review {
 
   &__title {
-    @include font ($fw:800, )
+    @include font ($main-font, 14px, 800, rgb(27, 32, 42), -0.62px, 20px);
+    margin-bottom: 24px;
+
+    // &--span {
+    //   @media (max-width: 767px) {
+    //     display: block;
+    //   }
+    // }
   }
 
+  &__list {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    width: 225px;
+    padding-right: 30px;
+
+    @media (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__text {
+    @include font($main-font, 14px, 400, #1b202a, -0.52px, 20px);
+
+    &--span {
+      @include font ($main-font, 30px, 700, $secondary-text-color, -0.75px);
+      display: block;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+  }
 }
