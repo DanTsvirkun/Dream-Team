@@ -1,14 +1,64 @@
 // ABOUT
 
+.about {
+    background-color: #f9f9f9;
+}
+
 .about__awards-item-title {
-    @include font($fs: 20px, $fc: #000, $ls: -0.8px, $lh: 30px);
+    @include font($fs: 20px, $fw: 800, $fc: #000, $ls: -0.8px, $lh: 30px);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.about__title {
+    margin-bottom: 38px;
 }
 
 .about__awards-paragraph {
     @include font($fs: 14px, $fc: #6b6f7a, $lh: 21px);
+    margin-bottom: 22px;
 }
 
 .about__awards-paragraph--modifier {
     @include font($fc: #000, $fw: 800);
 }
+
+.about__awards-list-item {
+    @include space($ww: 225px, $hh: 465px);
+    @include flex(center, center)
+    padding: 46px 0px 28px 25px;
+    box-shadow: -17px 20px #e6e9eb;
+    background-color: #fff;
+    
+
+    &:not(:last-child) {
+        margin-bottom: 88px;
+    }
+
+    &:last-child {
+        margin-bottom: 62px;
+    }
+
+    &::before {
+        content: "";
+        background-color: rgb(0, 234, 255);
+        @include space(60px, 2px)
+    }
+}
+
+.about__awards-img {
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    .mobile-container {
+        width: 225px;
+    }
+}
+
+
+
+
+  
 
