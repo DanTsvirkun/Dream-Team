@@ -1,5 +1,5 @@
 .it-direction {
-  background-image: url('../images/radial_gradient.png');
+  /* background-image: url('../images/radial_gradient.png'); */
   background-color: rgb(24, 28, 39);
 }
 
@@ -40,4 +40,9 @@
   height: 70px;
   text-transform: uppercase;
   border: none;
+}
+
+.modal-btn:hover {
+  box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
+  transition: all 200ms linear;
 }
