@@ -139,6 +139,12 @@
     text-transform: uppercase;
     border: none;
     margin: 0 auto;
+    transition: all 200ms linear;
+
+    &:hover {
+      box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
+    }
+
 
     @media (min-width: 768px) {
       @include space(530px, 70px);
