@@ -79,7 +79,7 @@
     &--counter::before {
       position: absolute;
       counter-increment: numbers;
-      content: '0' counters(numbers, '0');
+      content: '0'counters(numbers, '0');
       top: -38px;
       right: -2px;
       @include font($main-font, 50px, 700, rgb(251, 252, 251));
