@@ -50,15 +50,33 @@
     margin: 0 auto;
 }
 
+// .partner-list__item:not(:last-child) {
+//     margin-right: 26px;
+// }
+
+.partner-list__link {
+    display: inline-block;
+}
+
+.partner-list {
+    @include flex(space-between, center);
+    position: relative;
+
+    &__item {
+        height: 100%;
+    }
+}
+
+.partner-list-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+}
+
 
 @media (max-width: 768px) {
     .mobile-container {
         width: 225px;
     }
 }
-
-
-
-
-  
-
