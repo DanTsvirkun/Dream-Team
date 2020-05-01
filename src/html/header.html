@@ -1,0 +1,90 @@
+<header class="header" lang="ru">
+  <div class="container">
+    <div class="img-wrapper">
+      <a href="https://goit.ua/" class="logo">
+        <img
+          srcset="./images/logo.png 100w, ./images/logo@2x.png 200w"
+          src="./img/img3.jpg"
+          alt="company-logo"
+          sizes="100px"
+          height="30px"
+          class="logo"
+        />
+      </a>
+    </div>
+    <section class="presentation">
+      <p class="presentation__title">
+        Бесплатная презентация для тех, кто хочет сменить профессию и начать
+        карьеру в IT-сфере
+      </p>
+      <h1 class="presentation__main-title">
+        Узнай за 1 час каким может быть твой путь в IT
+      </h1>
+      <p class="presentation__desription">
+        Как с нуля всего за 3-5 месяцев получить все необходимые знания и навыки
+        для уверенного старта карьеры в IT.
+      </p>
+      <div class="presentation__date">
+        <p class="presenation__nearest">Ближайшая встреча</p>
+        <p class="presentation-address">Киев, 16 декабря 19:00</p>
+      </div>
+    </section>
+
+    <div class="main-form">
+      <h2 class="main-form__header">
+        Оставьте заявку на участие в бесплатной презентации
+      </h2>
+      <p class="main-form__description">
+        С вами свяжется карьерный консультант и ответит на вопросы.
+      </p>
+      <form action="#" class="form">
+        <ul class="form__required-items">
+          <li class="form__required-input">
+            <input
+              type="text"
+              name="user_name"
+              class="required-list-inputs"
+              placeholder="Имя"
+              required=""
+              minlength="3"
+              pattern="^[А-Яа-яЁё\s]+${3,32}"
+              oninvalid="setCustomValidity('Пожалуйста, введите Ваше настоящее имя.')"
+              onkeyup="setCustomValidity('')"
+            />
+          </li>
+          <li class="form__required-input">
+            <input
+              type="text"
+              name="user_email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              class="required-list-inputs"
+              placeholder="Email"
+              required=""
+              oninvalid="setCustomValidity('Пожалуйста, введите Ваш адрес электронной почты.')"
+              onkeyup="setCustomValidity('')"
+            />
+          </li>
+          <li class="form__required-input">
+            <input
+              type="text"
+              name="user_phone"
+              class="required-list-inputs"
+              placeholder="Телефон"
+              required=""
+              minlength="7"
+              pattern="^(?:\+38)?(?:\(044\)[ .-]?[0-9]{3}[ .-]?[0-9]{2}[ .-]?[0-9]{2}|044[ .-]?[0-9]{3}[ .-]?[0-9]{2}[ .-]?[0-9]{2}|044[0-9]{7})$"
+              oninvalid="setCustomValidity('Пожалуйста, введите номер для связи с Вами.')"
+              onkeyup="setCustomValidity('')"
+            />
+          </li>
+        </ul>
+        <div class="btn-wrap">
+          <button class="modal-btn">оставить заявку</button>
+        </div>
+      </form>
+      <div class="policy">
+        <p class="policy__terms">Политика конфиденциальности</p>
+      </div>
+    </div>
+  </div>
+</header>
