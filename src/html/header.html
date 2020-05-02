@@ -1,4 +1,4 @@
-<header class="header" lang="ru">
+<header class="header">
   <div class="container">
     <div class="img-wrapper">
       <a href="https://goit.ua/" class="logo">
@@ -20,13 +20,13 @@
       <h1 class="presentation__main-title">
         Узнай за 1 час каким может быть твой путь в IT
       </h1>
-      <p class="presentation__desription">
+      <p class="presentation__description">
         Как с нуля всего за 3-5 месяцев получить все необходимые знания и навыки
         для уверенного старта карьеры в IT.
       </p>
       <div class="presentation__date">
-        <p class="presenation__nearest">Ближайшая встреча</p>
-        <p class="presentation-address">Киев, 16 декабря 19:00</p>
+        <p class="presentation__nearest">Ближайшая встреча</p>
+        <p class="presentation__address">Киев, 16 декабря 19:00</p>
       </div>
     </section>
 
@@ -37,17 +37,17 @@
       <p class="main-form__description">
         С вами свяжется карьерный консультант и ответит на вопросы.
       </p>
-      <form action="#" class="form">
+      <form action="#" class="form" method="post">
         <ul class="form__required-items">
           <li class="form__required-input">
             <input
               type="text"
               name="user_name"
-              class="required-list-inputs"
+              class="form__input"
               placeholder="Имя"
               required=""
               minlength="3"
-              pattern="^[А-Яа-яЁё\s]+${3,32}"
+              pattern="[A-Za-zА-Яа-яЁё]{3,20}"
               oninvalid="setCustomValidity('Пожалуйста, введите Ваше настоящее имя.')"
               onkeyup="setCustomValidity('')"
             />
@@ -57,8 +57,8 @@
               type="text"
               name="user_email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-              class="required-list-inputs"
-              placeholder="Email"
+              class="form__input"
+              placeholder="e-mail"
               required=""
               oninvalid="setCustomValidity('Пожалуйста, введите Ваш адрес электронной почты.')"
               onkeyup="setCustomValidity('')"
@@ -68,11 +68,11 @@
             <input
               type="text"
               name="user_phone"
-              class="required-list-inputs"
+              class="form__input"
               placeholder="Телефон"
               required=""
               minlength="7"
-              pattern="^(?:\+38)?(?:\(044\)[ .-]?[0-9]{3}[ .-]?[0-9]{2}[ .-]?[0-9]{2}|044[ .-]?[0-9]{3}[ .-]?[0-9]{2}[ .-]?[0-9]{2}|044[0-9]{7})$"
+              pattern="^\+?3?8?(0\d{9})$"
               oninvalid="setCustomValidity('Пожалуйста, введите номер для связи с Вами.')"
               onkeyup="setCustomValidity('')"
             />
@@ -82,9 +82,9 @@
           <button class="modal-btn">оставить заявку</button>
         </div>
       </form>
-      <div class="policy">
-        <p class="policy__terms">Политика конфиденциальности</p>
-      </div>
+    </div>
+    <div class="policy">
+      <p class="policy__terms">Политика конфиденциальности</p>
     </div>
   </div>
 </header>
