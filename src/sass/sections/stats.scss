@@ -3,6 +3,7 @@
   margin: 0 auto;
 
   @media (min-width: 768px) {
+    margin: 0 auto;
     width: 748px;
   }
 
@@ -20,6 +21,12 @@
 
   @media (min-width: 1200px) {
     padding: 96px 0 142px;
+  }
+  &__section-wrapper {
+    @media (min-width: 768px) {
+      margin: 0 auto;
+      width: 700px;
+    }
   }
 
   &__section-title {
@@ -44,10 +51,18 @@
     margin-bottom: 34px;
 
     @media (min-width: 768px) {
-      width: 700px;
-      margin: 0 auto 64px;
-      box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
+      margin: 0 0 64px;
+      padding: 54px 0;
+      box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16),
+        -18px 18px rgb(230, 233, 235);
+
       // height: 543px;
+    }
+  }
+  &__offer-wrapper {
+    @media (min-width: 768px) {
+      width: 620px;
+      margin: 0 auto;
     }
   }
 }
@@ -57,26 +72,40 @@
     @include font($main-font, 14px, 800, rgb(27, 32, 42), -0.62px, 20px);
     margin-bottom: 24px;
 
+    @media (min-width: 768px) {
+      @include font($main-font, 18px, 800, rgb(27, 32, 42), -0.72px, 25px);
+      text-align: center;
+      padding: 0 140px;
+    }
     // &--span {
     //   @media (max-width: 767px) {
     //     display: block;
     //   }
     // }
   }
-
   &--map {
     position: relative;
 
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url(../images/stats/map.png);
+    @media (max-width: 767px) {
+      &::after {
+        content: '';
+        position: absolute;
+        right: -15%;
+        top: 67%;
+        background-image: url(../images/stats/map.png);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
+    }
+
+    @media (min-width: 768px) {
+      background-image: url(../images/stats/map-table.png);
+      background-position: 80% 80%;
+      background-repeat: no-repeat;
       width: 100%;
       height: 100%;
-      right: -12%;
-      top: 70%;
-      background-repeat: no-repeat;
-      z-index: -1;
     }
   }
 
@@ -84,6 +113,12 @@
     text-align: left;
     width: 225px;
     margin: 0 auto 24px;
+
+    @media (min-width: 768px) {
+      width: 594px;
+
+      @include flex(space-between);
+    }
   }
 
   &__item {
@@ -91,6 +126,12 @@
 
     @media (max-width: 767px) {
       &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+    @media (min-width: 768px) {
+      width: 26%;
+      &:nth-child(-n + 3) {
         margin-bottom: 24px;
       }
     }
@@ -102,26 +143,37 @@
     &--span {
       @include font($main-font, 30px, 700, $secondary-text-color, -0.75px);
       display: block;
-      margin-bottom: 12px;
+
       text-align: left;
     }
   }
 
   &__advantages {
+    &-wrapper {
+      @media (min-width: 768px) {
+        width: 594px;
+        margin: 0 auto;
+      }
+    }
     &-title {
       @include font($main-font, 14px, 700, rgb(27, 32, 42), -0.56px, 20px);
       width: 225px;
-      margin: 0 auto 16px;
+      margin: 0 0 14px;
     }
 
     &-list {
       @include flex(space-between);
       width: 225px;
       margin: 0 auto;
+      @media (min-width: 768px) {
+        margin: 0;
+        width: 232px;
+        @include flex(space-between);
+      }
     }
 
     &-item {
-      width: 48%;
+      width: 49%;
     }
 
     &-text {
@@ -130,7 +182,7 @@
       &--span {
         @include font($main-font, 25px, 700, $secondary-text-color, -1px);
         display: block;
-        margin-bottom: 10px;
+
         text-align: left;
       }
     }
@@ -140,11 +192,19 @@
 .offer {
   &__section-title {
     margin-bottom: 20px;
+    @media (min-width: 768px) {
+      text-align: center;
+      margin-bottom: 26px;
+    }
   }
 
   &__list {
     width: 225px;
     margin: 0 auto;
+    @media (min-width: 768px) {
+      width: 394px;
+      margin: 0;
+    }
   }
 
   &__item {
@@ -158,19 +218,33 @@
       }
     }
 
+    @media (min-width: 768px) {
+      width: auto;
+      padding-left: 36px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
     &::before {
       position: absolute;
-      display: inline-block;
       content: '';
       height: 12px;
       width: 12px;
       background-color: $secondary-text-color;
       left: -17px;
       top: 3px;
+      @media (min-width: 768px) {
+        left: 0px;
+      }
     }
   }
 
   &__text {
     @include font($main-font, 14px, 400, rgb(27, 32, 42), -0.56px, 20px);
+
+    @media (min-width: 768px) {
+      @include font($main-font, 16px, 400, rgb(27, 32, 42), -0.64px, 22px);
+    }
   }
 }
