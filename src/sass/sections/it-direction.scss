@@ -1,28 +1,44 @@
 .it-direction {
   background-color: #181c27;
-   &__box-1 {
-     padding-top: 40px;
-     @media (min-width: 768px) {
-       padding-top: 60px;
-     }
-   }
-   &__box-2 {
-     margin-bottom: 30px;
-     @media (min-width: 768px) {
-      width: 352px;
-      margin-bottom: 42px;
-     }
-   }
-   &__box-3 {
-     padding-bottom: 40px;
-     @media (min-width: 768px) {
-        padding-bottom: 64px;
+    &__box-1 {
+      padding-top: 40px;
+      @media (min-width: 768px) {
+        padding-top: 60px;
       }
-   }
+      @media (min-width: 1200px) {
+      padding-top: 108px;
+      width: 700px;
+      }
+    }
+    &__flex {
+      @media (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+        height: min-content;
+        outline: 2px solid white;
+      }
+
+      &.flex__box-2 {
+        margin-bottom: 30px;
+        @media (min-width: 768px) {
+          width: 352px;
+          margin-bottom: 42px;
+      }
+    }
+      &.flex__box-3 {
+        padding-bottom: 40px;
+        @media (min-width: 768px) {
+          padding-bottom: 64px;
+        }
+      }
+    }
   &__title {
     @include font($main-font, $fs: 16px, $fw: 800, $fc: $third-text-color, $ls: -0.64, $lh: 20px);
     @media (min-width: 768px) {
-     @include font($main-font, $fs: 22px, $fw: 800, $fc: $third-text-color, $ls: -0.88px, $lh: 30px);
+      @include font($main-font, $fs: 22px, $fw: 800, $fc: $third-text-color, $ls: -0.88px, $lh: 30px);
+    }
+    @media (min-width: 1200px) {
+      @include font($main-font, $fs: 30px, $fw: 800, $fc: $third-text-color, $ls: -1.2px, $lh: 35px);
     }
   }
   &__title::after {
@@ -56,10 +72,12 @@
 }
 
 .section-title {
-  @include font($main-font, $fs: 20px, $fw: 800, $fc: $secondary-text-color, $ls: -1px, $lh: 30px);
+  @include font($main-font, $fs: 19.8px, $fw: 800, $fc: $secondary-text-color, $ls: -1px, $lh: 30px);
+  /* original size: $fs: 20px */
   margin-bottom: 22px;
   @media (min-width: 768px) {
-    @include font($main-font, $fs: 40px, $fw: 400, $fc: $secondary-text-color, $ls: -1.6px, $lh: 50px);
+    @include font($main-font, $fs: 39px, $fw: 800, $fc: $secondary-text-color, $ls: -1.6px, $lh: 50px);
+    /* original size: $fs: 40px */
     margin-bottom: 36px;
   }
 }
@@ -71,7 +89,8 @@
   text-transform: uppercase;
   border: none;
   @media (min-width: 768px) {
-  @include font($main-font, $fs: 18px, $fw: 800, $fc: $third-text-color);
+  @include font($main-font, $fs: 18px, $fw: 700, $fc: $third-text-color);
+  /* original weight: $fw: 800px */
    width: 530px;
    height: 72px;
   }
