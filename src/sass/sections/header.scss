@@ -118,8 +118,12 @@
 .policy {
   padding: 10px 0 30px 0;
   font-size: 13px;
-  color: rgb(93, 96, 102);
   text-align: center;
+}
+
+.policy__terms {
+  color: rgb(93, 96, 102);
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -130,7 +134,7 @@
   .presentation {
     &__title {
       @include font($fc: $third-text-color, $ls: 1.3);
-      padding-bottom: 40px;
+      padding-bottom: 30px;
     }
 
     &__main-title {
@@ -175,7 +179,102 @@
 }
 
 @media (min-width: 1200px) {
+  .img-wrapper {
+    padding: 38px 0 75px 0;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .policy {
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding-right: 13%;
+  }
+
   .container {
     max-width: 1140px;
+  }
+
+  .presentation {
+    max-width: 58%;
+
+    &__title {
+      @include font($fc: $third-text-color, $lh: 1.5, $fs: 20px);
+      padding-bottom: 48px;
+    }
+
+    &__main-title {
+      @include font(
+        $fc: $secondary-text-color,
+        $lh: 1.2,
+        $fw: 700,
+        $ls: -1.6px,
+        $fs: 60px
+      );
+      padding-bottom: 54px;
+    }
+
+    .presentation__description {
+      font-size: 35px;
+      line-height: 1.2;
+    }
+
+    &__nearest {
+      font-size: 29.208px;
+      font-weight: bold;
+      padding-bottom: 16px;
+    }
+
+    &__address {
+      font-size: 46px;
+    }
+    padding-right: 95px;
+  }
+
+  .main-form {
+    max-width: 42%;
+    padding: 40px 30px 50px 30px;
+
+    &__header {
+      @include font($fs: 35px, $fw: 700, $lh: 1.2);
+      text-align: left;
+      padding-bottom: 23px;
+    }
+
+    .main-form__description {
+      font-size: 18px;
+      line-height: 1.556;
+      text-align: left;
+    }
+  }
+
+  .form {
+    &__input {
+      width: 100%;
+      height: 60px;
+      padding: 10px;
+      border: solid 0.1px;
+    }
+
+    &__required-input:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .form__required-items {
+      margin-bottom: 40px;
+    }
+
+    .modal-btn {
+      @include space(390px, 60px);
+    }
+
+    .btn-wrap {
+      padding: 0;
+    }
   }
 }
