@@ -197,7 +197,7 @@
     }
     
     .about__title {
-        @include font($fs: 30px, $fw: 800, $ls: -1.2px, $lh: 40px);
+        @include font($fs: 30px, $fw: 800, $fc: #1b202a, $ls: -1.2px, $lh: 40px);
     }
 
     .about__awards-list-item:not(:last-child) {
@@ -219,6 +219,12 @@
 
     .about {
         background-color: #fff;
+        padding: 106px 0 130px;
+    }
+
+    .about__title {
+        @include font($fs: 48px, $fw: 800, $fc: #1b202a, $ls: -1.92px, $lh: 60px);
+        margin-bottom: 74px;
     }
 
     .titles-wrapper .about__awards-title {
@@ -227,6 +233,10 @@
 
     .about__article + .about__partner-title {
         display: none;
+    }
+
+    .about__article {
+        margin: 0;
     }
 
     .about__awards-list-item {
@@ -259,19 +269,19 @@
         @include space(380px, 265px);
 
         &:nth-child(1) .about__awards-img {
-        left: 72%;
+        left: 75%;
         transform: translateX(-50%);
         top: 12%;   
     }
 
     &:nth-child(2) .about__awards-img {
-        left: 72%;
+        left: 77%;
         transform: translateX(-50%);
         top: 0;
     }
 
     &:nth-child(3) .about__awards-img {
-        left: 72%;
+        left: 80%;
         transform: translateX(-50%);
         top: 14%;
     }
@@ -279,6 +289,8 @@
 
     .awards-custom-container {
         width: 1140px;
+        order: 4;
+        margin: 58px 0 0 0;
     }
 
     .about__awards-list {
@@ -309,7 +321,9 @@
     }
 
     .about__flex-wrapper {
-        @include flex(space-between, stretch);
+        margin: 0 auto;
+        width: 1140px;
+        @include flex(space-between);
     }
 
     .about__partner-title--desktop {
@@ -319,4 +333,15 @@
     .about__awards-title--desktop {
         margin-bottom: 36px;
     }
+
+    .partner-wrapper,
+    .article-partner-wrapper {
+        margin: 0;
+    }
+
+    .titles-wrapper {
+        margin: 0;
+    }
+
+
 }
