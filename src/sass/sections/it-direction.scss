@@ -1,48 +1,82 @@
 .it-direction {
-  /* background-image: url('../images/radial_gradient.png'); */
-  background-color: rgb(24, 28, 39);
+  background-color: #181c27;
+   &__box-1 {
+     padding-top: 40px;
+     @media (min-width: 768px) {
+       padding-top: 60px;
+     }
+   }
+   &__box-2 {
+     margin-bottom: 30px;
+     @media (min-width: 768px) {
+      width: 352px;
+      margin-bottom: 42px;
+     }
+   }
+   &__box-3 {
+     padding-bottom: 40px;
+     @media (min-width: 768px) {
+        padding-bottom: 64px;
+      }
+   }
+  &__title {
+    @include font($main-font, $fs: 16px, $fw: 800, $fc: $third-text-color, $ls: -0.64, $lh: 20px);
+    @media (min-width: 768px) {
+     @include font($main-font, $fs: 22px, $fw: 800, $fc: $third-text-color, $ls: -0.88px, $lh: 30px);
+    }
+  }
+  &__title::after {
+    @include space(60px, 100%);
+    content: "";
+    border: 1px solid $secondary-text-color;
+    margin-bottom: 18px;
+    margin-top: 26px;
+    @media (min-width: 768px) {
+      margin-top: 38px;
+      margin-bottom: 16px;
+    }
+  }
+  &__descr {
+    @include font($main-font, 14px, $fw: 800, $fc: $third-text-color, $ls: -0.56px, $lh: 22px);
+    @media (min-width: 768px) {
+      @include font($main-font, 14px, $fw: 700, $fc: $third-text-color, $ls: -0.64px, $lh: 22px);
+    }
+  }
+  &__descr--thin {
+    @include font($main-font, 14px, $fw: 300, $fc: $third-text-color, $ls: -0.56px, $lh: 22px);
+    @media (min-width: 768px) {
+     @include font($main-font, 14px, $fw: 300, $fc: $third-text-color, $ls: -0.64px, $lh: 22px);
+    }
+  }
 }
 
-.it-direction__title {
-  @include font($ff: $main-font, $fc: $third-text-color, $fw: 800, $fs:16px, $lh: 20px);
-  letter-spacing: -0.64px;
-  padding-top: 40px;
-}
-
-.it-direction__title:after {
-  content: "";
-  display: block;
-  border: 1px solid #00eaff;
-  width: 60px;
-  margin-bottom: 22px;
-  margin-top: 28px;
-}
-
-.it-direction__descr {
-  @include font($ff: $main-font, $fc: $third-text-color, $fw: 800, $fs: 14px, $lh: 22px);
-  letter-spacing: -0.56;
-}
-
-.it-direction__descr--thin {
-  @include font($ff: $main-font, $fc: $third-text-color, $fw: 300, $fs: 14px, $lh: 22px);
-  letter-spacing: -0.56;
-  margin-bottom: 40px;
+.radial-gradient {
+  /* background: radial-gradient(at right, #47596d, rgba(84, 107, 132, .9)); */
+  /* background: radial-gradient(circle at 100%, rgba(51, 51, 51, .2), rgba(51, 51, 51, .2) 50%, rgba(238, 238, 238, .2) 75%, rgb(51, 51, 51) 75%); */
 }
 
 .section-title {
-  @include font($ff: $main-font, $fc: $secondary-text-color, $fw: 400, $fs: 20px, $lh: 30px);
-  margin-bottom: 28px;
+  @include font($main-font, $fs: 20px, $fw: 800, $fc: $secondary-text-color, $ls: -1px, $lh: 30px);
+  margin-bottom: 22px;
+  @media (min-width: 768px) {
+    @include font($main-font, $fs: 40px, $fw: 400, $fc: $secondary-text-color, $ls: -1.6px, $lh: 50px);
+    margin-bottom: 36px;
+  }
 }
 
 .modal-btn {
-  @include font($ff: $main-font, $fc: $third-text-color, $fs: 14px, $fw: 800);
+  @include font($main-font, 14px, 800, #ffffff);
   width: 260px;
   height: 70px;
   text-transform: uppercase;
   border: none;
-}
-
-.modal-btn:hover {
-  box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
-  transition: all 200ms linear;
+  @media (min-width: 768px) {
+  @include font($main-font, $fs: 18px, $fw: 800, $fc: $third-text-color);
+   width: 530px;
+   height: 72px;
+  }
+  &:hover {
+    box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
+    transition: all 200ms linear;
+  }
 }
