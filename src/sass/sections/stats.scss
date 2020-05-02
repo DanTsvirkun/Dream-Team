@@ -22,7 +22,6 @@
     padding: 96px 0 142px;
   }
 
-
   &__section-title {
     text-align: left;
     margin-bottom: 28px;
@@ -39,20 +38,23 @@
       text-align: left;
       padding-right: 700px;
     }
-
   }
 
   &__article-review {
     margin-bottom: 34px;
 
-
+    @media (min-width: 768px) {
+      width: 700px;
+      margin: 0 auto 64px;
+      box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
+      // height: 543px;
+    }
   }
 }
 
 .article-review {
-
   &__title {
-    @include font ($main-font, 14px, 800, rgb(27, 32, 42), -0.62px, 20px);
+    @include font($main-font, 14px, 800, rgb(27, 32, 42), -0.62px, 20px);
     margin-bottom: 24px;
 
     // &--span {
@@ -66,7 +68,7 @@
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       background-image: url(../images/stats/map.png);
       width: 100%;
@@ -87,7 +89,6 @@
   &__item {
     width: 225px;
 
-
     @media (max-width: 767px) {
       &:not(:last-child) {
         margin-bottom: 24px;
@@ -99,7 +100,7 @@
     @include font($main-font, 14px, 400, #1b202a, -0.52px, 20px);
 
     &--span {
-      @include font ($main-font, 30px, 700, $secondary-text-color, -0.75px);
+      @include font($main-font, 30px, 700, $secondary-text-color, -0.75px);
       display: block;
       margin-bottom: 12px;
       text-align: left;
@@ -108,18 +109,15 @@
 
   &__advantages {
     &-title {
-      @include font ($main-font, 14px, 700, rgb(27, 32, 42), -0.56px, 20px);
+      @include font($main-font, 14px, 700, rgb(27, 32, 42), -0.56px, 20px);
       width: 225px;
       margin: 0 auto 16px;
-
     }
 
     &-list {
       @include flex(space-between);
       width: 225px;
       margin: 0 auto;
-
-
     }
 
     &-item {
@@ -130,7 +128,7 @@
       @include font($main-font, 10px, 400, $main-text-color, -0.4px);
 
       &--span {
-        @include font ($main-font, 25px, 700, $secondary-text-color, -1px);
+        @include font($main-font, 25px, 700, $secondary-text-color, -1px);
         display: block;
         margin-bottom: 10px;
         text-align: left;
@@ -140,7 +138,6 @@
 }
 
 .offer {
-
   &__section-title {
     margin-bottom: 20px;
   }
@@ -150,7 +147,6 @@
     margin: 0 auto;
   }
 
-
   &__item {
     padding-left: 18px;
     position: relative;
@@ -159,14 +155,13 @@
     @media (max-width: 767px) {
       &:not(:last-child) {
         margin-bottom: 16px;
-
       }
     }
 
     &::before {
       position: absolute;
       display: inline-block;
-      content: "";
+      content: '';
       height: 12px;
       width: 12px;
       background-color: $secondary-text-color;
