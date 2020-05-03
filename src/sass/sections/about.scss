@@ -234,6 +234,13 @@
             margin-bottom: 36px;
         }
     }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        & {
+            width: 715px;
+            margin-bottom: 60px;
+        }
+    }
 }
 
 .article {
@@ -325,6 +332,10 @@
             width: 652px;
         }
     }
+
+    &__item {
+        width: 15%;
+    }
 }
 
 .titles-wrapper {
@@ -367,13 +378,6 @@
 @media (max-width: 767px) {
     .mobile-custom-container {
         width: 225px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-    .awards {
-        width: 715px;
-        margin-bottom: 60px;
     }
 }
 
