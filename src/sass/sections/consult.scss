@@ -1,0 +1,96 @@
+.consult {
+  background-color: $third-text-color;
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-item {
+      position: relative;
+      padding-left: 38px;
+      text-align: left;
+      line-height: 1.429;
+
+      span {
+        font-weight: 800;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 21px;
+      }
+
+      &::before {
+        content: '';
+        width: 18px;
+        height: 10px;
+        position: absolute;
+        background-image: url('../../images/arrow.png');
+        display: inline-block;
+        left: 0px;
+        top: 3px;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include font;
+    padding-bottom: 60px;
+
+    .section-title {
+      padding-bottom: 22px;
+      padding-top: 36px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 620px;
+  }
+
+  .consult__list-item__description {
+    font-size: 16px;
+    line-height: 1.375;
+    padding-left: 38px;
+
+    &:not(:last-child) {
+      padding-bottom: 22px;
+    }
+  }
+
+  &__wrapper {
+    @include font;
+
+    .section-title {
+      padding-bottom: 28px;
+      padding-top: 58px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.333;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .consult {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__info {
+      max-width: 50%;
+    }
+
+    &__title {
+      max-width: 50%;
+    }
+  }
+}
