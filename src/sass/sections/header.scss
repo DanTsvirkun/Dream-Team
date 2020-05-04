@@ -13,7 +13,7 @@
   padding: 30px 0;
 }
 
-.logo {
+.site__logotype {
   height: 30px;
 }
 
@@ -107,7 +107,7 @@
   padding-bottom: 24px;
 }
 
-.request{
+.request {
   @include space(100%, 40px);
   text-transform: uppercase;
   transition: all 200ms linear;
