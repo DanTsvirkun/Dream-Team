@@ -14,7 +14,6 @@
 
 .stats {
   padding: 36px 0;
-
   @media (min-width: 768px) {
     padding: 56px 0;
   }
@@ -93,7 +92,6 @@
       font-size: 18px;
       letter-spacing: -0.72px;
       line-height: 25px;
-      //   @include font($main-font, 18px, 800, rgb(27, 32, 42), -0.72px, 25px);
       text-align: center;
       padding: 0 140px;
     }
@@ -130,7 +128,6 @@
 
     @media (min-width: 768px) {
       width: 594px;
-
       @include flex(space-between);
     }
   }
@@ -146,7 +143,6 @@
 
     @media (min-width: 768px) {
       width: 26%;
-
       &:nth-child(-n + 3) {
         margin-bottom: 24px;
       }
@@ -278,14 +274,12 @@
       font-size: 16px;
       letter-spacing: -0.64px;
       line-height: 22px;
-      //   @include font($fs: 16px, $ls: -0.64px, $lh: 22px);
     }
 
     @media (min-width: 1200px) {
       font-size: 18px;
       letter-spacing: -0.72px;
       line-height: 24px;
-      //   @include font($fs: 18px, $ls: -0.72px, $lh: 24px);
     }
   }
 }
