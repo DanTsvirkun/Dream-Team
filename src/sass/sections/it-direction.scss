@@ -88,7 +88,7 @@
   }
 }
 
-.section-title {
+.fixed-title {
   @include font($main-font, $fs: 19.8px, $fw: 800, $fc: $secondary-text-color, $ls: -1px, $lh: 30px);
   /* original size: $fs: 20px */
     margin-bottom: 22px;
