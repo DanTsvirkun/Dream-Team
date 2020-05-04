@@ -1,14 +1,14 @@
 .footer {
-  background-image: url('../../images/bg_mobile.jpg');
+  background-image: url('../images/bg_mobile.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
   @media (min-width: 768px) {
-    background-image: url('../../images/bg_tablet.jpg');
+    background-image: url('../images/bg_tablet.jpg');
   }
   @media (min-width: 1200px) {
-    background-image: url('../../images/bg_pc.jpg');
+    background-image: url('../images/bg_pc.jpg');
   }
   &__title {
     padding-top: 42px;
@@ -20,41 +20,41 @@
     @media (min-width: 1200px) {
       padding-top: 170px;
       margin-bottom: 340px;
-      }
     }
-    &__title a {
-      @include font($main-font, $fs: 20px, $fw: 800, $fc: $secondary-text-color, $ls: 0.4px, $lh: 60px);
-        display: block;
-        text-decoration: none;
-        text-transform: uppercase;
-        cursor: pointer;
-        text-align: center;
+  }
+  &__title a {
+    @include font($main-font, $fs: 20px, $fw: 800, $fc: $secondary-text-color, $ls: 0.4px, $lh: 60px);
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    &::after {
+      @include space(210px, 100%);
+      content: "";
+      border: 1px solid $secondary-text-color;
+      margin: -18px auto 0;
+    }
+    @media (min-width: 768px) {
+      @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 0.6px, $lh: 60px);
       &::after {
-        @include space(210px, 100%);
-          content: "";
-          border: 1px solid $secondary-text-color;
-          margin: -18px auto 0;
-        }
-      @media (min-width: 768px) {
-        @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 0.6px, $lh: 60px);
-          &::after {
-            @include space(310px, 100%);
-              content: "";
-              border: 1px solid $secondary-text-color;
-              margin: -12px auto 0;
-        }
+        @include space(310px, 100%);
+        content: "";
+        border: 1px solid $secondary-text-color;
+        margin: -12px auto 0;
+      }
       @media (min-width: 1200px) {
         @include font($main-font, $fs: 40px, $fw: 800, $fc: $secondary-text-color, $ls: 3px, $lh: 16px);
-          &::after {
-            @include space(440px, 100%);
-              content: "";
-              border: 1px solid $secondary-text-color;
-              margin: 0 auto;
-              margin-top: 14px;
-            }
-          }
+        &::after {
+          @include space(440px, 100%);
+          content: "";
+          border: 1px solid $secondary-text-color;
+          margin: 0 auto;
+          margin-top: 14px;
         }
       }
+    }
+  }
   &-wrap {
     @media (min-width: 768px) {
       display: flex;
@@ -66,8 +66,8 @@
     }
   }
   &-wrap__logo {
-    display: block;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
     @media (min-width: 768px) {
       margin: 0 14px 0 54px;
     }
@@ -77,14 +77,13 @@
   }
   &-wrap__descr {
     @include font($main-font, $fs: 14px, $fw: 400, $fc: $third-text-color, $ls: -0.56px, $lh: 60px);
-      text-align: center;
+    text-align: center;
     @media (min-width: 768px) {
       @include font($main-font, $fs: 18px, $fw: 400, $fc: $third-text-color, $ls: -0.72px, $lh: 30px);
-     }
+    }
     @media (min-width: 1200px) {
       @include font($main-font, $fs: 20px, $fw: 400, $fc: $third-text-color, $ls: -0.8px, $lh: 30px);
-        margin-top: 40px;
+      margin-top: 40px;
     }
   }
 }
-
