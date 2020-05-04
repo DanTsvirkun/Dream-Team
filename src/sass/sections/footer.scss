@@ -1,17 +1,92 @@
 .footer {
-  /* position: relative; */
-  background-image: url('../../images/stars/stars_mobile@1x.jpg');
-
-/*   &__photo {
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-  } */
-
-
-
-  
+  background-image: url('../../images/bg_mobile.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  @media (min-width: 768px) {
+    background-image: url('../../images/bg_tablet.jpg');
+  }
+  @media (min-width: 1200px) {
+    background-image: url('../../images/bg_pc.jpg');
+  }
+  &__title {
+    padding-top: 42px;
+    margin-bottom: 302px;
+    @media (min-width: 768px) {
+      padding-top: 78px;
+      margin-bottom: 280px;
+    }
+    @media (min-width: 1200px) {
+      padding-top: 262px;
+      margin-bottom: 628px;
+    }
+  }
+  &__title a {
+    @include font($main-font, $fs: 20px, $fw: 800, $fc: $secondary-text-color, $ls: 0.4px, $lh: 60px);
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    &::after {
+      @include space(210px, 100%);
+      content: "";
+      border: 1px solid $secondary-text-color;
+      margin: 0 auto;
+      margin-top: -18px;
+    }
+    @media (min-width: 768px) {
+      @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 0.6px, $lh: 60px);
+      &::after {
+        @include space(310px, 100%);
+        content: "";
+        border: 1px solid $secondary-text-color;
+        margin: 0 auto;
+        margin-top: -12px;
+       }
+    @media (min-width: 1200px) {
+      @include font($main-font, $fs: 60px, $fw: 800, $fc: $secondary-text-color, $ls: 1.2px);
+      &::after {
+        @include space(610px, 100%);
+        content: "";
+        border: 1px solid $secondary-text-color;
+        margin: 0 auto;
+        margin-top: -2px;
+      }
+    }
+  }
+}
+  &__wrap {
+    @media (min-width: 768px) {
+      display: flex;
+      padding-bottom: 18px;
+    }
+    @media (min-width: 1200px) {
+      padding-bottom: 64px;
+    }
+  }
+  &__wrap-logo {
+    background-image: url('../../images/logo/mobile.png');
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      margin: 0 14px 0 74px;
+     }
+    @media (min-width: 1200px) {
+      margin: 0 30px 0 392px;
+    }
+  }
+  &__wrap-descr {
+     @include font($main-font, $fs: 14px, $fw: 400, $fc: $third-text-color, $ls: -0.56px, $lh: 60px);
+     text-align: center;
+     @media (min-width: 768px) {
+      @include font($main-font, $fs: 18px, $fw: 400, $fc: $third-text-color, $ls: -0.72px, $lh: 30px);
+    }
+     @media (min-width: 1200px) {
+      @include font($main-font, $fs: 25px, $fw: 400, $fc: $third-text-color, $ls: -1px, $lh: 30px);
+    }
+  }
 }
