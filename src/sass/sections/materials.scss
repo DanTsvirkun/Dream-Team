@@ -1,16 +1,15 @@
-
 .materials__container {
+  max-width: 260px;
+  margin: 0 auto;
+
   @media (min-width: 768px) {
     max-width: 748px;
   }
-}
 
-@media (min-width: 1200px) {
-  .materials__container {
+  @media (min-width: 1200px) {
     max-width: 1140px;
   }
 }
-
 
 
 
