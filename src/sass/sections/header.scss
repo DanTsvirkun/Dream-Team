@@ -13,6 +13,10 @@
   padding: 30px 0;
 }
 
+.logo {
+  height: 30px;
+}
+
 .presentation {
   &__date {
     @include font($fc: #f9ae23, $ls: 0.56);
@@ -103,7 +107,7 @@
   padding-bottom: 24px;
 }
 
-.modal-btn {
+.request{
   @include space(100%, 40px);
   text-transform: uppercase;
   transition: all 200ms linear;
@@ -119,16 +123,16 @@
   padding: 10px 0 30px 0;
   font-size: 13px;
   text-align: center;
-}
 
-.policy__terms {
-  color: rgb(93, 96, 102);
-  text-decoration: none;
-}
+  &__terms {
+    color: rgb(93, 96, 102);
+    text-decoration: none;
+  }
 
-.policy__terms:hover {
-  color: $secondary-color;
-  transition: color 0.5s;
+  .policy__terms:hover {
+    color: $secondary-color;
+    transition: color 0.5s;
+  }
 }
 
 @media (min-width: 768px) {
@@ -188,7 +192,7 @@
     padding: 38px 0 75px 0;
   }
 
-  .presentation__wrapper {
+  .presentation-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -269,7 +273,7 @@
       margin-bottom: 40px;
     }
 
-    .modal-btn {
+    .request {
       @include space(390px, 60px);
     }
 
