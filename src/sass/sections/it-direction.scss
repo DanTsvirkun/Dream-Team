@@ -90,7 +90,7 @@
   }
 }
 
-.section-title {
+.fixed-heading {
   @include font($main-font, $fs: 19.8px, $fw: 800, $fc: $secondary-text-color, $ls: -1px, $lh: 30px);
   /* original size: $fs: 20px */
   margin-bottom: 22px;
@@ -106,7 +106,7 @@
   }
 }
 
-.modal-btn {
+.direction-btn {
   @include font($main-font, 14px, 800, #ffffff);
   width: 260px;
   height: 70px;
