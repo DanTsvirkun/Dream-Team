@@ -103,6 +103,7 @@
   &--map {
     position: relative;
 
+
     @media (max-width: 767px) {
       &::after {
         content: '';
