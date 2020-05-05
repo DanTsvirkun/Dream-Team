@@ -272,23 +272,23 @@
     &--animation {
       @media (min-width: 1200px) {
         &-1 {
-          animation: bounceInRight 1s linear;
+          animation: fadeInRight 400ms linear;
         }
 
         &-2 {
-          animation: bounceInRight 2s linear;
+          animation: fadeInRight 550ms linear;
         }
 
         &-3 {
-          animation: bounceInRight 3s linear;
+          animation: fadeInRight 700ms linear;
         }
 
         &-4 {
-          animation: bounceInRight 4s linear;
+          animation: fadeInRight 850ms linear;
         }
 
         &-5 {
-          animation: fadeInRight 5s linear;
+          animation: fadeInRight 1000ms linear;
         }
       }
     }
