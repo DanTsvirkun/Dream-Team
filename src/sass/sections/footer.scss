@@ -90,3 +90,8 @@
   }
 }
 
+.wow {
+  @media (min-width: 1200px) {
+    animation: heartBeat 3s linear;
+  }
+}
