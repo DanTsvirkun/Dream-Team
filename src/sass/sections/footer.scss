@@ -28,7 +28,6 @@
     display: block;
     text-decoration: none;
     text-transform: uppercase;
-    cursor: pointer;
     text-align: center;
     &::after {
       @include space(210px, 100%);
@@ -36,6 +35,11 @@
       border: 1px solid $secondary-text-color;
       margin: 0 auto;
       margin-top: -18px;
+    }
+    transition: all 500ms linear;
+    &:hover {
+      box-shadow: 0px 2px 20px 10px $secondary-text-color;
+      opacity: 0.59;
     }
     @media (min-width: 768px) {
       @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 0.6px, $lh: 60px);
