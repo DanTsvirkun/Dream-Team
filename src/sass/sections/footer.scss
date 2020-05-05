@@ -1,22 +1,14 @@
 .footer {
-  background-image: url('../../images/bg_mobile.jpg');
+  background-image: url('../images/bg_mobile.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
   @media (min-width: 768px) {
-    background-image: url('../../images/bg_tablet.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
+    background-image: url('../images/bg_tablet.jpg');
   }
   @media (min-width: 1200px) {
-    background-image: url('../../images/bg_pc.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
+    background-image: url('../images/bg_pc.jpg');
   }
   &__title {
     padding-top: 42px;
@@ -76,11 +68,8 @@
     }
   }
   &__wrap-logo {
-    background-image: url('../../images/logo.png');
-    display: block;
-    width: 100px;
-    height: 30px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     @media (min-width: 768px) {
       margin: 0 14px 0 54px;
      }

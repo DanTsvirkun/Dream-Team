@@ -1,16 +1,23 @@
 .header {
   @include font($fc: $third-text-color);
   background-image: radial-gradient(
-    circle,
-    rgba(13, 35, 59, 1) 47%,
-    rgba(16, 33, 54, 1) 83%
+    ellipse at right,
+    #144076 0%,
+    #144076 0%,
+    #0e0f16 74%,
+    #0e0f16 100%
   );
   text-align: left;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .img-wrapper {
   padding: 30px 0;
+}
+
+.site__logotype {
+  height: 30px;
 }
 
 .presentation {
@@ -103,7 +110,7 @@
   padding-bottom: 24px;
 }
 
-.modal-btn {
+.request {
   @include space(100%, 40px);
   text-transform: uppercase;
   transition: all 200ms linear;
@@ -116,19 +123,19 @@
 }
 
 .policy {
-  padding: 10px 0 30px 0;
+  padding: 10px 0 0 0;
   font-size: 13px;
   text-align: center;
-}
 
-.policy__terms {
-  color: rgb(93, 96, 102);
-  text-decoration: none;
-}
+  &__terms {
+    color: rgb(93, 96, 102);
+    text-decoration: none;
+  }
 
-.policy__terms:hover {
-  color: $secondary-color;
-  transition: color 0.5s;
+  .policy__terms:hover {
+    color: $secondary-color;
+    transition: color 0.5s;
+  }
 }
 
 @media (min-width: 768px) {
@@ -184,11 +191,15 @@
 }
 
 @media (min-width: 1200px) {
-  .img-wrapper {
-    padding: 38px 0 75px 0;
+  .header {
+    padding-top: 38px;
   }
 
-  .presentation__wrapper {
+  .img-wrapper {
+    padding: 0px 0 75px 0;
+  }
+
+  .presentation-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -269,7 +280,7 @@
       margin-bottom: 40px;
     }
 
-    .modal-btn {
+    .request {
       @include space(390px, 60px);
     }
 

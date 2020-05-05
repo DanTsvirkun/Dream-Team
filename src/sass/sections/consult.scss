@@ -13,7 +13,7 @@
       text-align: left;
       line-height: 1.429;
 
-      span {
+      &-description--span {
         font-weight: 800;
       }
 
@@ -25,7 +25,7 @@
         content: '';
         @include space(18px, 10px);
         position: absolute;
-        background-image: url('../../images/arrow.png');
+        background-image: url('../images/arrow.png');
         display: inline-block;
         left: 0px;
         top: 3px;
@@ -37,7 +37,7 @@
     @include font;
     padding-bottom: 60px;
 
-    .section-title {
+    .title-style {
       padding-bottom: 22px;
       padding-top: 36px;
     }
@@ -49,7 +49,7 @@
     max-width: 620px;
   }
 
-  .consult__list-item__description {
+  .consult__list-item-description {
     @include font(
       $ff: $main-font,
       $fs: 16px,
@@ -69,7 +69,7 @@
   &__wrapper {
     @include font;
 
-    .section-title {
+    .title-style {
       padding-bottom: 28px;
       padding-top: 58px;
       @include font(
@@ -124,7 +124,7 @@
     }
   }
 
-  .section-title {
+  .title-style {
     margin-right: 126px;
   }
 }
