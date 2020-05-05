@@ -106,6 +106,15 @@
   }
 }
 
+input:required:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+input:required:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+
 .btn-wrap {
   padding-bottom: 24px;
 }
@@ -296,3 +305,4 @@
     padding-top: 0px;
   }
 }
+
