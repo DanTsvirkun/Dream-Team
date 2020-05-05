@@ -11,8 +11,6 @@
   }
 }
 
-
-
 .materials {
   padding: 32px 0 38px 0;
   position: relative;
@@ -78,11 +76,10 @@
         -20px 20px rgb(230, 233, 235);
     }
 
-
     &--counter::before {
       position: absolute;
       counter-increment: numbers;
-      content: '0'counters(numbers, '0');
+      content: '0' counters(numbers, '0');
       top: -38px;
       right: -2px;
       @include font($main-font, 50px, 700, rgb(251, 252, 251));
@@ -147,8 +144,10 @@
 
     &:hover {
       box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
+      @media (min-width: 768px) {
+        box-shadow: 0px 2px 20px 4px rgba(255, 107, 8, 0.59);
+      }
     }
-
 
     @media (min-width: 768px) {
       @include space(530px, 70px);
@@ -159,6 +158,7 @@
     @media (min-width: 1200px) {
       @include space(813px, 109px);
       font-size: 25px;
+      animation: pulse 400ms linear;
     }
   }
 }
