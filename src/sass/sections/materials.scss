@@ -15,6 +15,8 @@
 
 .materials {
   padding: 32px 0 38px 0;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: 768px) {
     padding: 52px 0 58px 0;
@@ -84,6 +86,7 @@
       top: -38px;
       right: -2px;
       @include font($main-font, 50px, 700, rgb(251, 252, 251));
+      z-index: -1;
 
       @media (min-width: 768px) {
         font-size: 70px;
