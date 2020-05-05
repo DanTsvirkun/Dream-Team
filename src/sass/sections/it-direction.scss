@@ -122,9 +122,9 @@
   height: 70px;
   text-transform: uppercase;
   border: none;
+  transition: all 200ms linear;
   &:hover {
     box-shadow: 0px 2px 20px 10px rgba(255, 107, 8, 0.59);
-    transition: all 200ms linear;
   }
   @media (min-width: 768px) {
     @include font($main-font, $fs: 18px, $fw: 700, $fc: $third-text-color);
@@ -140,6 +140,6 @@
 
 .wow {
   @media (min-width: 1200px) {
-    animation: pulse 6s linear;
+    animation: pulse 600ms linear;
   }
 }
