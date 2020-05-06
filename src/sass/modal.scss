@@ -1,7 +1,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 5; /* Sit on top */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -17,7 +17,16 @@
 .main-form--modal {
     height: auto;
     @include flex(center, center);
+    flex-direction: column;
     position: relative;
+
+    @media (max-width: 767px) {
+        max-width: 320px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        max-width: 400px;
+    }
 }
 
 .main-form__header--modal {
@@ -30,4 +39,11 @@
     position: absolute;
     top: 10px;
     right: 12px;
+}
+
+.form__required-input--modal {
+    @media (min-width: 768px) and (max-width: 1199px) {
+        width: 200px;
+        
+    }
 }
