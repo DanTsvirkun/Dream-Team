@@ -24,7 +24,8 @@
       padding-top: 100px;
     }
     @media (min-width: 1200px) {
-      padding-top: 120px;
+      padding-top: 185px;
+      padding-bottom: 550px;
      }
   }
   &__title-wrap-link {
@@ -53,10 +54,10 @@
       }
     }
     @media (min-width: 1200px) {
-      @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 3px, $lh: 60px);
+      @include font($main-font, $fs: 40px, $fw: 800, $fc: $secondary-text-color, $ls: 3px, $lh: 60px);
       &::after {
-        @include space(350px, 100%);
-        margin-top: -10px;
+        @include space(450px, 100%);
+        margin-top: -6px;
       }
     }
   }
