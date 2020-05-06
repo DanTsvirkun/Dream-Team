@@ -200,8 +200,7 @@ input:required:valid:not(:placeholder-shown) {
 
 @media (min-width: 1200px) {
   .header {
-    padding-top: 30px;
-    padding-bottom: 75px;
+    padding: 50px 0 95px;
   }
 
   .img-wrapper {
@@ -305,6 +304,6 @@ input:required:valid:not(:placeholder-shown) {
     position: absolute;
     bottom: 0;
     transform: translateY(-5px);
-    right: 135px;
+    right: 146px;
   }
 }

@@ -11,13 +11,14 @@
   @media (min-width: 768px) {
     background-image: url('../images/bg_tablet.jpg');
   }
-  @media (min-resolution: 192dpi) {
+  @media (min-resolution: 192dpi) and (min-width: 768px) {
     background-image: url('../images/bg_tablet@2x.jpg');
   }
   @media (min-width: 1200px) {
     background-image: url('../images/bg_pc.jpg');
+    padding: 55px 0 95px;
   }
-  @media (min-resolution: 192dpi) {
+  @media (min-resolution: 192dpi) and (min-width: 1200px) {
     background-image: url('../images/bg_pc@2x.jpg');
   }
   &__title {
@@ -29,6 +30,7 @@
     width: 100%;
     padding-top: 30px;
     padding-bottom: 390px;
+    @include flex(center, center);
     @media (min-width: 768px) {
       padding-top: 100px;
     }
@@ -39,7 +41,7 @@
   }
   &__title-wrap-link {
     @include font($main-font, $fs: 20px, $fw: 800, $fc: $secondary-text-color, $ls: 0.4px, $lh: 60px);
-      display: block;
+      display: inline-block;
       text-decoration: none;
       text-transform: uppercase;
       text-align: center;
@@ -71,49 +73,3 @@
     }
   }
 }
-
-
-
-
-
-
-
-
- /*
-
- &__wrap {
-  @media (min-width: 768px) {
-    display: flex;
-    padding-bottom: 18px;
-  }
-  @media (min-width: 1200px) {
-    display: flex;
-    padding-bottom: 44px;
-  }
-}
-&__wrap-logo {
-  display: flex;
-  justify-content: center;
-  @media (min-width: 768px) {
-    margin: 0 14px 0 54px;
-   }
-  @media (min-width: 1200px) {
-    margin: 40px 25px 0 196px;
-  }
-}
-&__wrap-descr {
-   @include font($main-font, $fs: 14px, $fw: 400, $fc: $third-text-color, $ls: -0.56px, $lh: 60px);
-   text-align: center;
-   @media (min-width: 768px) {
-    @include font($main-font, $fs: 18px, $fw: 400, $fc: $third-text-color, $ls: -0.72px, $lh: 30px);
-  }
-   @media (min-width: 1200px) {
-    @include font($main-font, $fs: 20px, $fw: 400, $fc: $third-text-color, $ls: -0.8px, $lh: 30px);
-    margin-top: 40px;
-  }
-}
-}
-
-*/
-
-
