@@ -29,6 +29,9 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
+    &:hover {
+       text-shadow: 20px 20px $secondary-text-color;
+       opacity: 0.59;
     &::after {
       @include space(210px, 100%);
       content: "";
@@ -37,9 +40,6 @@
       margin-top: -18px;
     }
     transition: all 500ms linear;
-    &:hover {
-      box-shadow: 0px 2px 20px 10px $secondary-text-color;
-      opacity: 0.59;
     }
     @media (min-width: 768px) {
       @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 0.6px, $lh: 60px);
@@ -95,7 +95,7 @@
   }
 } */
 
-.wow {
+.footer__title {
   @media (min-width: 1200px) {
     animation: heartBeat 3s linear;
     }
