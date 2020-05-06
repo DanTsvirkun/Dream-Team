@@ -2,14 +2,8 @@
   <div class="container">
     <div class="img-wrapper">
       <a href="https://goit.ua/" class="site__logotype">
-        <img
-          srcset="./images/logo.png 100w, ./images/logo@2x.png 200w"
-          src="./img/img3.jpg"
-          alt="company-logo"
-          sizes="100px"
-          height="30"
-          class="site__logotype"
-        />
+        <img srcset="./images/goit-logo.png 100w, ./images/goit-logo@2x.png 200w" src="./images/goit-logo.jpg"
+          alt="company-logo" sizes="100px" height="30" class="site__logotype" />
       </a>
     </div>
 
@@ -42,45 +36,22 @@
         <form action="./telegram/telegram.php" class="form" method="post">
           <ul class="form__required-items">
             <li class="form__required-input">
-              <label
-                ><input
-                  type="text"
-                  name="user_name"
-                  class="form__input"
-                  placeholder="Имя"
-                  required=""
-                  minlength="3"
+              <label><input type="text" name="user_name" class="form__input" placeholder="Имя" required="" minlength="3"
                   pattern="[A-Za-zА-Яа-яЁё]{3,20}"
                   oninvalid="setCustomValidity('Пожалуйста, введите Ваше настоящее имя.')"
-                  onkeyup="setCustomValidity('')"
-              /></label>
+                  onkeyup="setCustomValidity('')" /></label>
             </li>
             <li class="form__required-input">
-              <label
-                ><input
-                  type="text"
-                  name="user_email"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                  class="form__input"
-                  placeholder="E-mail"
-                  required=""
+              <label><input type="text" name="user_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  class="form__input" placeholder="E-mail" required=""
                   oninvalid="setCustomValidity('Пожалуйста, введите Ваш адрес электронной почты.')"
-                  onkeyup="setCustomValidity('')"
-              /></label>
+                  onkeyup="setCustomValidity('')" /></label>
             </li>
             <li class="form__required-input">
-              <label
-                ><input
-                  type="text"
-                  name="user_phone"
-                  class="form__input"
-                  placeholder="Телефон"
-                  required=""
-                  minlength="7"
-                  pattern="^\+?3?8?(0\d{9})$"
+              <label><input type="text" name="user_phone" class="form__input" placeholder="Телефон" required=""
+                  minlength="7" pattern="^\+?3?8?(0\d{9})$"
                   oninvalid="setCustomValidity('Пожалуйста, введите номер для связи с Вами.')"
-                  onkeyup="setCustomValidity('')"
-              /></label>
+                  onkeyup="setCustomValidity('')" /></label>
             </li>
           </ul>
           <div class="btn-wrap">
