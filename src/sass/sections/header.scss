@@ -13,7 +13,7 @@
 }
 
 .img-wrapper {
-  padding: 30px 0;
+  margin-bottom: 30px;
 }
 
 .site__logotype {
@@ -23,7 +23,7 @@
 .presentation {
   &__date {
     @include font($fc: #f9ae23, $ls: 0.56);
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   &__address {
@@ -32,22 +32,22 @@
 
   .presentation__description {
     @include font($lh: 1.3, $fc: $third-text-color);
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   &__main-title {
     @include font($fc: $secondary-text-color, $lh: 1.3, $fs: 20px, $fw: 700);
-    padding-bottom: 25px;
+    margin-bottom: 25px;
   }
 
   &__nearest {
     @include font($fw: 700, $fc: #f9ae23);
-    padding-bottom: 12px;
+    margin-bottom: 12px;
   }
 
   &__title {
     @include font($fc: $third-text-color, $ls: -0.8);
-    padding-bottom: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -57,15 +57,16 @@
   background-color: $third-text-color;
   box-shadow: 0 12px 70px 0 rgba(121, 139, 188, 0.5);
   padding: 20px 17px 0 17px;
+  margin-bottom: 10px;
 
   &__header {
     @include font($fs: 16px, $fw: 700, $lh: 1.25);
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .main-form__description {
     @include font($fs: 13px, $fw: 300);
-    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
 }
 
@@ -106,6 +107,14 @@
   }
 }
 
+input:required:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+input:required:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
 .btn-wrap {
   padding-bottom: 24px;
 }
@@ -113,28 +122,27 @@
 .request {
   @include space(100%, 40px);
   text-transform: uppercase;
-  transition: all 200ms linear;
+  transition: all 500ms linear;
   border: none;
 
   &:hover {
-    transition: all 200 ms;
-    box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
+    box-shadow: 0px 2px 20px 10px rgba(255, 107, 8, 0.59);
+    animation: pulse 400ms linear;
   }
 }
 
 .policy {
-  padding: 10px 0 0 0;
   font-size: 13px;
   text-align: center;
 
   &__terms {
     color: rgb(93, 96, 102);
     text-decoration: none;
+    transition: all 500ms linear;
   }
 
   .policy__terms:hover {
     color: $secondary-color;
-    transition: color 0.5s;
   }
 }
 
@@ -146,7 +154,7 @@
   .presentation {
     &__title {
       @include font($fc: $third-text-color, $ls: 1.3);
-      padding-bottom: 30px;
+      margin-bottom: 30px;
     }
 
     &__main-title {
@@ -157,16 +165,15 @@
         $fw: 700,
         $ls: -1.6px
       );
-      padding-bottom: 30px;
     }
 
     .presentation__description {
       @include font($lh: 1.444, $fc: $third-text-color, $fw: 500, $fs: 18px);
-      padding-bottom: 23px;
+      margin-bottom: 23px;
     }
 
     &__nearest {
-      padding-bottom: 5px;
+      margin-bottom: 5px;
     }
 
     &__address {
@@ -176,11 +183,12 @@
 
   .main-form {
     padding: 40px 76px 0;
+    margin-bottom: 10px;
 
     &__header {
       @include font($fs: 24px, $fw: 700, $lh: 1.2);
       text-align: center;
-      padding-bottom: 23px;
+      margin-bottom: 23px;
     }
 
     &__description {
@@ -192,17 +200,19 @@
 
 @media (min-width: 1200px) {
   .header {
-    padding-top: 38px;
+    padding-top: 30px;
+    padding-bottom: 75px;
   }
 
   .img-wrapper {
-    padding: 0px 0 75px 0;
+    margin: 0px 0 75px 0;
   }
 
   .presentation-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
   }
 
   .container {
@@ -210,11 +220,11 @@
   }
 
   .presentation {
-    max-width: 58%;
+    max-width: 50%;
 
     &__title {
       @include font($fc: $third-text-color, $lh: 1.5, $fs: 20px);
-      padding-bottom: 48px;
+      margin-bottom: 48px;
     }
 
     &__main-title {
@@ -225,7 +235,8 @@
         $ls: -1.6px,
         $fs: 60px
       );
-      padding-bottom: 54px;
+      margin-bottom: 54px;
+      animation: flipInX 800ms linear;
     }
 
     .presentation__description {
@@ -236,13 +247,12 @@
     &__nearest {
       font-size: 29.208px;
       font-weight: bold;
-      padding-bottom: 16px;
+      margin-bottom: 16px;
     }
 
     &__address {
       font-size: 46px;
     }
-    padding-right: 95px;
   }
 
   .main-form {
@@ -253,14 +263,14 @@
     &__header {
       @include font($fs: 35px, $fw: 700, $lh: 1.2);
       text-align: left;
-      padding-bottom: 23px;
+      margin-bottom: 23px;
     }
 
     .main-form__description {
       font-size: 18px;
       line-height: 1.556;
       text-align: left;
-      padding-bottom: 40px;
+      margin-bottom: 40px;
     }
   }
 
@@ -285,14 +295,16 @@
     }
 
     .btn-wrap {
-      padding-top: 20px;
+      margin-top: 20px;
     }
   }
 
   .policy {
     width: 100%;
     text-align: right;
-    padding-right: 13%;
-    padding-top: 0px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-5px);
+    right: 135px;
   }
 }
