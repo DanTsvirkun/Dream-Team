@@ -387,3 +387,21 @@
         margin-bottom: 32px;
     }
 }
+
+@media (min-width: 1200px) {
+    .animation_1 {
+        animation: bounceInLeft 1s linear;
+    }
+
+    .animation_2 {
+        animation: bounceInRight 1s linear;
+    }
+
+    .animation_3 {
+        animation: bounceInUp 1.5s linear;
+    }
+
+    .animation_4 {
+        animation: bounceInDown 2s linear;
+    }
+}
