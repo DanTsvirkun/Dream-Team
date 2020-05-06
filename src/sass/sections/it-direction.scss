@@ -3,7 +3,6 @@
   clear: both;
   display: block;
 }
-
 .it-direction {
   background-color: #181c27;
   &__box-1 {
@@ -24,7 +23,6 @@
       width: 352px;
       margin-bottom: 40px;
     }
-
     @media (min-width: 1200px) {
       float: right;
     }
@@ -86,7 +84,6 @@
     }
   }
 }
-
 .radial-gradient {
   background: rgba(20, 64, 118, 1);
   background: radial-gradient(ellipse at right, rgba(20, 64, 118, 1) 0%, rgba(20, 64, 118, 1) 0%, rgba(14, 15, 22, 1) 74%, rgba(14, 15, 22, 1) 100%);
@@ -97,7 +94,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#144076', endColorstr='#0e0f16', GradientType=1);
   }
 }
-
 .fixed-title {
   @include font($main-font, $fs: 19.8px, $fw: 800, $fc: $secondary-text-color, $ls: -1px, $lh: 30px);
   /* original size: $fs: 20px */
@@ -115,7 +111,6 @@
     margin-bottom: 74px;
   }
 }
-
 .fix-modal-btn {
   @include font($main-font, 14px, 800, #ffffff);
   width: 260px;
@@ -138,7 +133,7 @@
   }
 }
 
-.wow {
+.animation-target {
   @media (min-width: 1200px) {
     animation: pulse 600ms linear;
   }
