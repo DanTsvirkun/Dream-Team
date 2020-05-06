@@ -5,22 +5,26 @@
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  padding: 290px 0 290px 0;
   @media (min-width: 768px) {
     background-image: url('../images/bg_tablet.jpg');
   }
   @media (min-width: 1200px) {
     background-image: url('../images/bg_pc.jpg');
   }
+  &__title {
+  @media (min-width: 1200px) {
+    animation: heartBeat 3s linear;
+  }
+}
   &__title-wrap {
-    @media (min-width: 320px) {
-      padding-top: 48px;
-    }
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 390px;
     @media (min-width: 768px) {
       padding-top: 100px;
     }
     @media (min-width: 1200px) {
-      padding: 0;
+      padding-top: 120px;
      }
   }
   &__title-wrap-link {
@@ -29,9 +33,11 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
+    transition: all 500ms linear;
     &:hover {
-       text-shadow: 20px 20px $secondary-text-color;
+       text-shadow: 1px 2px 20px $secondary-text-color;
        opacity: 0.59;
+    }
     &::after {
       @include space(210px, 100%);
       content: "";
@@ -39,29 +45,23 @@
       margin: 0 auto;
       margin-top: -18px;
     }
-    transition: all 500ms linear;
-    }
     @media (min-width: 768px) {
       @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 0.6px, $lh: 60px);
       &::after {
         @include space(310px, 100%);
-        content: "";
-        border: 1px solid $secondary-text-color;
-        margin: 0 auto;
         margin-top: -12px;
-       }
+      }
+    }
     @media (min-width: 1200px) {
-      @include font($main-font, $fs: 40px, $fw: 800, $fc: $secondary-text-color, $ls: 3px, $lh: 16px);
+      @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 3px, $lh: 60px);
       &::after {
-        @include space(440px, 100%);
-        content: "";
-        border: 1px solid $secondary-text-color;
-        margin: 0 auto;
-        margin-top: 14px;
+        @include space(350px, 100%);
+        margin-top: -10px;
       }
     }
   }
 }
+
  /*  &__wrap {
     @media (min-width: 768px) {
       display: flex;
@@ -94,38 +94,3 @@
     }
   }
 } */
-
-.footer__title {
-  @media (min-width: 1200px) {
-    animation: heartBeat 3s linear;
-    }
-  }
-}
-
-@media(max-width: 767px) {
-  .footer__title-wrap {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 8px);
-  }
-}
-
-@media(min-width: 768px) and (max-width: 1199px) {
-  .footer__title-wrap {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 8px);
-  }
-}
-
-@media(min-width: 1200px) {
-  .footer__title-wrap {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 130px);
-  }
-}
-
