@@ -6,7 +6,6 @@
 @import 'helpers/variables.scss';
 @import 'helpers/mixins.scss';
 @import 'animate.scss';
-@import 'modal.scss';
 @import 'base.scss';
 @import 'helpers/extras.scss';
 
@@ -24,3 +23,7 @@
 @import 'sections/it-direction.scss';
 @import 'sections/about.scss';
 @import 'sections/footer.scss';
+
+// MODAL
+
+@import 'modal.scss';
