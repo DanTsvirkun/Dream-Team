@@ -78,7 +78,7 @@
     }
 
     @media (min-width: 1200px) {
-      width: 406px;
+      width: 390px;
       margin: 0;
       align-self: flex-end;
     }
@@ -266,6 +266,30 @@
 
       @media (min-width: 768px) {
         left: 0px;
+      }
+    }
+
+    &--animation {
+      @media (min-width: 1200px) {
+        &-1 {
+          animation: fadeInRight 400ms linear;
+        }
+
+        &-2 {
+          animation: fadeInRight 550ms linear;
+        }
+
+        &-3 {
+          animation: fadeInRight 700ms linear;
+        }
+
+        &-4 {
+          animation: fadeInRight 850ms linear;
+        }
+
+        &-5 {
+          animation: fadeInRight 1000ms linear;
+        }
       }
     }
   }
