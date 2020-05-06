@@ -6,21 +6,17 @@
 
 .it-direction {
   background-color: #181c27;
-
   &__box-1 {
     padding-top: 40px;
-
     @media (min-width: 768px) {
       padding-top: 62px;
     }
-
     @media (min-width: 1200px) {
       padding-top: 110px;
       width: 650px;
       margin-bottom: 72px;
     }
   }
-
   &__box-2 {
     margin-bottom: 30px;
 
@@ -33,20 +29,16 @@
       float: right;
     }
   }
-
   &__box-3 {
     padding-bottom: 42px;
-
     @media (min-width: 768px) {
       padding-bottom: 64px;
     }
-
     @media (min-width: 1200px) {
       padding-bottom: 114px;
     }
   }
-
-  &__title {
+   &__title {
     @include font($main-font, $fs: 16px, $fw: 800, $fc: $third-text-color, $ls: -0.64px, $lh: 20px);
 
     @media (min-width: 768px) {
@@ -57,7 +49,6 @@
       @include font($main-font, $fs: 30px, $fw: 800, $fc: $third-text-color, $ls: -1.2px, $lh: 35px);
     }
   }
-
   &__descr {
     @include font($main-font, 14px, $fw: 800, $fc: $third-text-color, $ls: -0.56px, $lh: 22px);
 
@@ -69,7 +60,6 @@
       @include font($main-font, 18px, $fw: 700, $fc: $third-text-color, $ls: -0.72px, $lh: 35px);
     }
   }
-
   &__descr--thin {
     @include font($main-font, 14px, $fw: 300, $fc: $third-text-color, $ls: -0.56px, $lh: 22px);
 
@@ -81,7 +71,6 @@
       @include font($main-font, 18px, $fw: 300, $fc: $third-text-color, $ls: -0.72px, $lh: 35px);
     }
   }
-
   &__descr::before {
     @include space(60px, 100%);
     content: "";
@@ -89,11 +78,9 @@
     height: 2px;
     margin-bottom: 28px;
     margin-top: 26px;
-
     @media (min-width: 768px) {
       margin: 36px 0 18px 0;
     }
-
     @media (min-width: 1200px) {
       margin: 44px 0 16px 0;
     }
@@ -135,22 +122,24 @@
   height: 70px;
   text-transform: uppercase;
   border: none;
-
+  transition: all 500ms linear;
   &:hover {
-    box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
-    transition: all 200ms linear;
+    box-shadow: 0px 2px 20px 10px rgba(255, 107, 8, 0.59);
   }
-
   @media (min-width: 768px) {
     @include font($main-font, $fs: 18px, $fw: 700, $fc: $third-text-color);
-    /* original weight: $fw: 800px */
     width: 530px;
     height: 72px;
   }
-
   @media (min-width: 1200px) {
     @include font($main-font, $fs: 30px, $fw: 800, $fc: $third-text-color);
     width: 682px;
     height: 108px;
+  }
+}
+
+.wow {
+  @media (min-width: 1200px) {
+    animation: pulse 600ms linear;
   }
 }
