@@ -13,7 +13,6 @@
 }
 
 .img-wrapper {
-  padding-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -127,7 +126,6 @@ input:required:valid:not(:placeholder-shown) {
   border: none;
 
   &:hover {
-    transition: all 500ms linear;
     box-shadow: 0px 2px 20px 10px rgba(255, 107, 8, 0.59);
     animation: pulse 400ms linear;
   }
@@ -140,11 +138,11 @@ input:required:valid:not(:placeholder-shown) {
   &__terms {
     color: rgb(93, 96, 102);
     text-decoration: none;
+    transition: all 500ms linear;
   }
 
   .policy__terms:hover {
     color: $secondary-color;
-    transition: all 500ms linear;
   }
 }
 
@@ -202,8 +200,8 @@ input:required:valid:not(:placeholder-shown) {
 
 @media (min-width: 1200px) {
   .header {
-    padding-top: 38px;
-    padding-bottom: 102px;
+    padding-top: 30px;
+    padding-bottom: 75px;
   }
 
   .img-wrapper {
@@ -238,7 +236,7 @@ input:required:valid:not(:placeholder-shown) {
         $fs: 60px
       );
       margin-bottom: 54px;
-      animation: flipInX 400ms linear;
+      animation: flipInX 800ms linear;
     }
 
     .presentation__description {
