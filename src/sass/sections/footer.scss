@@ -5,22 +5,26 @@
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  @media (min-resolution: 192dpi) {
-    background-image: url('../images/bg_mobile@2x.jpg');
+  @media (min-width: 320px) {
+    @media (min-resolution: 192dpi) {
+      background-image: url('../images/bg_mobile@2x.jpg');
+    }
   }
+
   @media (min-width: 768px) {
     background-image: url('../images/bg_tablet.jpg');
-  }
-  @media (min-resolution: 192dpi) and (min-width: 768px) {
-    background-image: url('../images/bg_tablet@2x.jpg');
+    @media (min-resolution: 192dpi) {
+      background-image: url('../images/bg_tablet@2x.jpg');
+    }
   }
   @media (min-width: 1200px) {
     background-image: url('../images/bg_pc.jpg');
     padding: 55px 0 95px;
+    @media (min-resolution: 192dpi) {
+      background-image: url('../images/bg_pc@2x.jpg');
+    }
   }
-  @media (min-resolution: 192dpi) and (min-width: 1200px) {
-    background-image: url('../images/bg_pc@2x.jpg');
-  }
+ 
   &__title {
   @media (min-width: 1200px) {
     animation: heartBeat 3s linear;

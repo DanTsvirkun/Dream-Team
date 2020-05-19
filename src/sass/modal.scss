@@ -25,12 +25,25 @@
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
+        height: auto;
         max-width: 400px;
+    }
+
+    @media (min-width: 1200px) {
+        height: auto;
     }
 }
 
-.main-form__header--modal {
-    text-align: center;
+@media (min-width: 320px) {
+    .main-form__header--modal {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-form__header--modal {
+        text-align: center;
+    }
 }
 
 #close {
