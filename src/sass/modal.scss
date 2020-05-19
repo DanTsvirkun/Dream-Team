@@ -15,24 +15,35 @@
 }
 
 .main-form--modal {
-    height: 378px;
+    height: auto;
     @include flex(center, center);
     flex-direction: column;
     position: relative;
 
     @media (max-width: 767px) {
         max-width: 320px;
-        height: 398px;
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
+        height: auto;
         max-width: 400px;
-        height: 678px;
+    }
+
+    @media (min-width: 1200px) {
+        height: auto;
     }
 }
 
-.main-form__header--modal {
-    text-align: center;
+@media (min-width: 320px) {
+    .main-form__header--modal {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-form__header--modal {
+        text-align: center;
+    }
 }
 
 #close {

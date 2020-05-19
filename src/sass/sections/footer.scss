@@ -5,8 +5,10 @@
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  @media (min-resolution: 192dpi) {
-    background-image: url('../images/bg_mobile@2x.jpg');
+  @media (min-width: 320px) {
+    @media (min-resolution: 192dpi) {
+      background-image: url('../images/bg_mobile@2x.jpg');
+    }
   }
 
   @media (min-width: 768px) {
