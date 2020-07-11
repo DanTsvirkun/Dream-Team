@@ -2,17 +2,27 @@ var body = document.getElementById('body');
 var modal = document.getElementById('myModal');
 var span = document.getElementById('close');
 function showModal() {
-    modal.style.display = 'flex';
-    body.style.overflow = 'hidden';
+  window.addEventListener('keydown', closeModalByESC);
+  modal.style.display = 'flex';
+  body.style.overflow = 'hidden';
 }
-span.onclick = function () {
+
+function closeModalByESC(e) {
+  if (e.code === 'Escape') {
     modal.style.display = 'none';
     body.style.overflow = 'visible';
+    window.removeEventListener('keydown', closeModalByESC);
+  }
+}
+span.onclick = function () {
+  modal.style.display = 'none';
+  body.style.overflow = 'visible';
+  window.removeEventListener('keydown', closeModalByESC);
 };
 window.onclick = function (event) {
-    console.log(event.target);
-    if (event.target == modal) {
-        modal.style.display = 'none';
-        body.style.overflow = 'visible';
-    }
+  if (event.target == modal) {
+    modal.style.display = 'none';
+    body.style.overflow = 'visible';
+    window.removeEventListener('keydown', closeModalByESC);
+  }
 };

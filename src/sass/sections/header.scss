@@ -307,3 +307,8 @@ input:required:valid:not(:placeholder-shown) {
     right: 146px;
   }
 }
+
+#close {
+  outline: none;
+  cursor: pointer;
+}
